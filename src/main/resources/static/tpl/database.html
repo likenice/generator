@@ -1,0 +1,120 @@
+<div class="container bs-docs-container">
+    <div class="row">
+        <form class="form-horizontal">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <span>数据库连接配置</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dbType" class="col-sm-2 control-label">类型</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbType" ng-model="dbType" readonly />
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group">
+                <label for="dbIP" class="col-sm-2 control-label">IP地址</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbIP" ng-model="dbIP"/>
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group">
+                <label for="dbPort" class="col-sm-2 control-label">端口号</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbPort" ng-model="dbPort"/>
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group">
+                <label for="dbName" class="col-sm-2 control-label">数据库名</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbName" ng-model="dbName"/>
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group">
+                <label for="dbUsername" class="col-sm-2 control-label">登录用户</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbUsername" ng-model="dbUsername"/>
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+            <div class="form-group">
+                <label for="dbPassword" class="col-sm-2 control-label">登录密码</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="dbPassword" ng-model="dbPassword"/>
+                </div>
+                <div class="col-sm-6"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-9">
+                    <button type="submit" class="btn btn-success" ng-click="testDBConnection();">
+                        <span class="glyphicon glyphicon-sort"></span> 连接测试
+                    </button>
+                    <button type="submit" class="btn btn-success" ng-click="readTables();">
+                        <span class="glyphicon glyphicon-list-alt"></span> 读取表
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <table ng-if="tables.length > 0" st-table="displayedCollection" st-safe-src="tables" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat-start="row in displayedCollection">
+                    <td><p>{{ row.name }}</p></td>
+                    <td><p>{{ row.type }}</p></td>
+                    <td><p>{{ row.remark }}</p></td>
+                    <td>
+                        <button ng-if="row_status[$index]" class="btn btn-sm btn-primary" ng-click="select($index, row)">明细</button>
+                        <button ng-if="!row_status[$index]" class="btn btn-sm btn-success" ng-click="select($index, row)">关闭</button>
+                    </td>
+                </tr>
+                <tr ng-repeat-end="">
+                    <td colspan="4">
+                        <div uib-collapse="row_status[$index]">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 20%">名称</th>
+                                                <th style="width: 12%">类型</th>
+                                                <th style="width: 8%">长度</th>
+                                                <th style="width: 8%">精度</th>
+                                                <th style="width: 8%">可空</th>
+                                                <th style="width: 8%">主键</th>
+                                                <th style="width: 36%">注释</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="field in fields">
+                                                <td><p>{{field.columnName}}</p></td>
+                                                <td><p>{{field.typeName}}</p></td>
+                                                <td><p>{{field.columnSize}}</p></td>
+                                                <td><p>{{field.decimalDigits}}</p></td>
+                                                <td><p>{{field.isNullable}}</p></td>
+                                                <td><p>{{field.isPrimaryKey}}</p></td>
+                                                <td><p>{{field.remarks}}</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
