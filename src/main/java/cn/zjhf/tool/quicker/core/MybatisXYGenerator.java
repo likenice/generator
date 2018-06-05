@@ -167,7 +167,7 @@ public class MybatisXYGenerator implements Generator {
 
             // 主键生成
             if (field.isPrimaryKey()) {
-                if (KeyType.KEY_TYPE_ID.equalsIgnoreCase(tableInfo.getKeyType()) && field.getDataType() == DBDataType.BIGINT) {
+                if (KeyType.KEY_TYPE_ID.equalsIgnoreCase(tableInfo.getKeyType()) && (field.getDataType() == DBDataType.BIGINT || field.getDataType() == DBDataType.INT )) {
                     tableConfiguration.setGeneratedKey(new GeneratedKey(field.getColumnName(), "JDBC", true, null));
                 }
             }

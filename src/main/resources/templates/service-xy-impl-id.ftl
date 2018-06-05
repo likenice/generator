@@ -41,7 +41,8 @@ public class ${className} implements ${serviceClassName} {
      */
     @Override
     public int save(${modelClassName} ${modelObjectName}) throws BusinessException {
-        return ${mapperObjectName}.insertSelective(${modelObjectName});
+        ${mapperObjectName}.insertSelective(${modelObjectName});
+        return ${modelObjectName}.get${keyFieldName}();
     }
 
 
