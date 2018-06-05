@@ -61,7 +61,7 @@ public class GeneratedJavaDTOClass extends AbstractGeneratedJavaDatabaseClass {
 
                 // 不能为空，且没有默认值，增加非空校验
                 String defaultValue = getDefaultValue(field);
-                if(!field.isNullable() && null == defaultValue) {
+                if(!field.isNullable()) {
                     // 非空校验的注解
                     javaField.getAnnotations().add(getNullValidationAnnotation(field, true));
                 }
