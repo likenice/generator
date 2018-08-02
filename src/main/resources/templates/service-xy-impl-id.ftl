@@ -75,10 +75,10 @@ public class ${className} implements ${serviceClassName} {
     @Override
     public int delete(Integer id) {
         // 逻辑删除
-        ${modelClassName} ${modelObjectName} = new ${modelClassName}();
-        ${modelObjectName}.set${keyFieldName}(id);
-        ${modelObjectName}.setDeleteFlag(1);
-        return ${mapperObjectName}.updateByPrimaryKeySelective(${modelObjectName});
+        //${modelClassName} ${modelObjectName} = new ${modelClassName}();
+       // ${modelObjectName}.set${keyFieldName}(id);
+        //${modelObjectName}.setDeleteFlag(1);
+        return ${mapperObjectName}.deleteByPrimaryKey(id);
     }
 
     /**
@@ -122,7 +122,7 @@ public class ${className} implements ${serviceClassName} {
         RowBounds rowBounds = new RowBounds(startRow, pageSize);
 
         // 排序，使用表的字段名称
-        condition.setOrderByClause("create_time desc");
+        //condition.setOrderByClause("create_time desc");
 
         // 封装ListResultVO
         List<${modelClassName}> list = ${mapperObjectName}.selectByExampleAndRowBounds(condition, rowBounds);
