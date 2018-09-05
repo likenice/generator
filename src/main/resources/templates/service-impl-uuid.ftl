@@ -130,13 +130,13 @@ public class ${className} implements ${serviceClassName} {
         // 分页
         // pagehelper.offset-as-page-num=false，默认false，表示offset,limit，true表示pageNum,pageSize
         // pagehelper.row-bounds-with-count=true，表示先select count()，默认false，不查询count
-        int startRow = queryParam.getStartRow();
-        int pageSize = queryParam.getPageSize();
+        Integer startRow = queryParam.getStartRow();
+        Integer pageSize = queryParam.getPageSize();
         if (startRow < 0) {
             startRow = 0;
         }
-        if (pageSize <= 0) {
-            pageSize = 20;
+        if (pageSize == null) {
+            pageSize = Integer.MAX_VALUE;
         }
         RowBounds rowBounds = new RowBounds(startRow, pageSize);
 

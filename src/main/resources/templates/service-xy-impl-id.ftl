@@ -111,13 +111,13 @@ public class ${className} implements ${serviceClassName} {
         }
 
         // 分页
-        int startRow = queryParam.getStartRow();
-        int pageSize = queryParam.getPageSize();
+        Integer startRow = queryParam.getStartRow();
+        Integer pageSize = queryParam.getPageSize();
         if (startRow < 0) {
             startRow = 0;
         }
-        if (pageSize <= 0) {
-            pageSize = 20;
+        if (pageSize == null) {
+            pageSize = Integer.MAX_VALUE;
         }
         RowBounds rowBounds = new RowBounds(startRow, pageSize);
 
