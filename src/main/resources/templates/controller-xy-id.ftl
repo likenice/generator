@@ -74,7 +74,13 @@ public class ${className} {
 
         String jsonString = JSON.toJSONString(queryParam);
         ${queryDtoClassName} ${queryDtoObjectName} = JSON.parseObject(jsonString, ${queryDtoClassName}.class);
-        int pageSize = queryParam.getPageSize();
+
+        int pageSize =0;
+        if(queryParam.getPageSize() == null){
+            pageSize = 20;
+        }else{
+            pageSize = queryParam.getPageSize();
+        }
         int currentPageNo = queryParam.getCurrentPageNo() > 1 ? queryParam.getCurrentPageNo(): 1;
 
         ${queryDtoObjectName}.setStartRow((currentPageNo-1)*pageSize);
@@ -109,6 +115,9 @@ public class ${className} {
         if(queryParam == null){
             queryParam = new ${queryDtoClassName}();
         }
+        if(queryParam.getPageSize() == null){
+            queryParam.setPageSize(20);
+        }
         // 由于需要处理PageInfo，所以直接在Service中处理返回结果
         List dataList = ${serviceObjectName}.list(queryParam);
 
@@ -129,7 +138,7 @@ public class ${className} {
         if(queryParam == null){
             queryParam = new ${queryDtoClassName}();
         }
-        // 由于需要处理PageInfo，所以直接在Service中处理返回结果
+
         int dataCount = ${serviceObjectName}.count(queryParam);
 
         LeaseResult lResult = new LeaseResult();
