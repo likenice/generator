@@ -57,28 +57,45 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>cn.waterlu</groupId>
+            <artifactId>waterloo-starter-web</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+        </dependency>
+
         <!-- common-web -->
         <dependency>
-            <groupId>com.rent</groupId>
-            <artifactId>common-web</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>cn.waterlu</groupId>
+            <artifactId>waterloo-hipster</artifactId>
+            <version>1.0.3-SNAPSHOT</version>
         </dependency>
-
-        <!-- common-tool -->
         <dependency>
-            <groupId>com.rent</groupId>
-            <artifactId>common-tool</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.xy</groupId>
+            <artifactId>xy-generator</artifactId>
+            <version>2.0</version>
         </dependency>
-
-        <!-- common-mybatis -->
         <dependency>
-            <groupId>com.rent</groupId>
-            <artifactId>common-mybatis</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.32</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>test-nexus</id>
+            <name>test</name>
+            <url>http://192.168.2.6:8081/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <#if projectType == "Spring Cloud">
     <dependencyManagement>
