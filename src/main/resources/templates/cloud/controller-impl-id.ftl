@@ -17,7 +17,6 @@ import com.rent.validation.UpdateGroup;
 import com.rent.com.ResponseResult;
 import com.rent.web.SimpleResponseResult;
 import com.rent.com.ListResponseResult;
-import com.rent.util.UuidUtil;
 import com.rent.vo.ListResultVO;
 
 <#list imports as import>

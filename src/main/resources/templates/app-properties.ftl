@@ -17,7 +17,7 @@ mapper.not-empty=false
 mapper.identity=MYSQL
 # 为了返回自动生成的UUID
 mapper.before=true
-mapper.mappers=com.rent.dao.CrudMapper,com.rent.dao.InsertUuidListMapper
+mapper.mappers=com.rent.dao.CrudMapper
 
 # pagehelper配置
 pagehelper.helperDialect=mysql
