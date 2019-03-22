@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.github.pagehelper.PageInfo;
 import tk.mybatis.mapper.entity.Example;
 import com.rent.exception.BusinessException;
 import com.rent.vo.ListResultVO;
