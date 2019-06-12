@@ -162,7 +162,7 @@ public class ${className} implements ${serviceClassName} {
         }
 
         // 封装ListResultVO
-        int num = companyDemoMapper.selectCountByCondition(condition);
+        int num = ${mapperObjectName}.selectCountByCondition(condition);
 
         return num;
 
