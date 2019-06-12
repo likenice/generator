@@ -1,6 +1,6 @@
 package ${packageName};
 
-import com.rent.exception.BusinessException;
+import com.domes.generatortools.exception.BusinessException
 import java.util.List;
 
 <#list imports as import>

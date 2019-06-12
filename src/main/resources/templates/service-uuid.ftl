@@ -1,7 +1,7 @@
 package ${packageName};
 
-import com.rent.exception.BusinessException;
-import com.rent.model.ListResponseResult;
+import com.domes.generatortools.exception.BusinessException
+import com.domes.generatortools.model.ListResponseResult;
 import java.util.List;
 
 <#list imports as import>

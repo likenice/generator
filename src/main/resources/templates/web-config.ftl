@@ -1,7 +1,7 @@
 package ${packageName};
 
-import com.rent.exception.GlobalExceptionHandler;
-import com.rent.web.HttpRequestFilter;
+import com.domes.generatortools.exception.GlobalExceptionHandler;
+import com.domes.generatortools.web.HttpRequestFilter;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;

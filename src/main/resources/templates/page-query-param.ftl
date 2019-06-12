@@ -3,7 +3,7 @@ package ${packageName};
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.rent.dto.PageQueryParam;
+import com.domes.generatortools.dto.PageQueryParam;
 <#list imports as import>
 import ${import.name};
 </#list>

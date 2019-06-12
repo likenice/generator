@@ -3,7 +3,7 @@ package ${packageName};
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.rent.vo.ResultVO;
+import com.domes.generatortools.vo.ResultVO;
 <#list imports as import>
 import ${import.name};
 </#list>

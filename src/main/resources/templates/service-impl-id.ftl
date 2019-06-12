@@ -12,9 +12,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.github.pagehelper.PageInfo;
 import tk.mybatis.mapper.entity.Example;
-import com.rent.exception.BusinessException;
-import com.rent.model.ListResponseResult;
-import com.rent.vo.ListResultVO;
+import com.domes.generatortools.exception.BusinessException
+import com.domes.generatortools.model.ListResponseResult;
+import com.domes.generatortools.vo.ListResultVO;
 
 <#list imports as import>
 import ${import.name};

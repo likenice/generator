@@ -59,21 +59,21 @@
 
         <!-- common-web -->
         <dependency>
-            <groupId>com.rent</groupId>
+            <groupId>com.domes</groupId>
             <artifactId>common-web</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <!-- common-tool -->
         <dependency>
-            <groupId>com.rent</groupId>
+            <groupId>com.domes</groupId>
             <artifactId>common-tool</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <!-- common-mybatis -->
         <dependency>
-            <groupId>com.rent</groupId>
+            <groupId>com.domes</groupId>
             <artifactId>common-mybatis</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

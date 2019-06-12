@@ -2,9 +2,9 @@ package ${packageName};
 
 import java.util.Map;
 import org.springframework.stereotype.Component;
-import com.rent.model.ResponseResult;
-import com.rent.exception.BusinessException;
-import com.rent.vo.ListResultVO;
+import com.domes.generatortools.model.ResponseResult;
+import com.domes.generatortools.exception.BusinessException
+import com.domes.generatortools.vo.ListResultVO;
 
 <#list imports as import>
 import ${import.name};

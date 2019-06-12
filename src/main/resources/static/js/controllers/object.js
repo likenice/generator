@@ -24,12 +24,12 @@ angular.module('app').controller('ObjectController', ['$scope', '$http', '$state
     $scope.javaDir = 'src/main/java';
     $scope.resourcesDir = 'src/main/resources';
     $scope.testDir = 'src/test';
-    $scope.basePackage = 'com.rent.service.user';
+    $scope.basePackage = 'com.domes.service.user';
     $scope.configPackage = 'config';
-    $scope.controllerPackage = 'web';
+    $scope.controllerPackage = 'controller';
     $scope.servicePackage = 'service';
     $scope.daoPackage = 'dao';
-    $scope.entityPackage = 'model';
+    $scope.entityPackage = 'entity';
     $scope.dtoPackage = 'dto';
     $scope.voPackage = 'vo';
 

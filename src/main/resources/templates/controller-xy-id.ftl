@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import com.alibaba.fastjson.JSON;
-import com.rent.exception.BusinessException;
-import com.rent.validation.InsertGroup;
-import com.rent.validation.UpdateGroup;
-import com.rent.model.ResponseResult;
-import com.rent.model.ListResponseResult;
-import com.rent.util.UuidUtil;
-import com.rent.vo.ListResultVO;
-import com.rent.vo.LeaseResult;
+import com.domes.generatortools.exception.BusinessException
+import com.domes.generatortools.validation.InsertGroup;
+import com.domes.generatortools.validation.UpdateGroup;
+import com.domes.generatortools.model.ResponseResult;
+import com.domes.generatortools.model.ListResponseResult;
+import com.domes.generatortools.util.UuidUtil;
+import com.domes.generatortools.vo.ListResultVO;
+import com.domes.generatortools.vo.LeaseResult;
 import java.util.List;
-import com.rent.common.util.Page;
+import com.domes.generatortools.common.util.Page;
 
 <#list imports as import>
 import ${import.name};

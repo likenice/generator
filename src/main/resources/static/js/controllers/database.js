@@ -7,9 +7,9 @@ angular.module('app').controller('DatabaseController', ['$scope', '$http', '$sta
     $scope.dbType = 'MySQL';
     $scope.dbIP = '10.10.10.174';
     $scope.dbPort = '3306';
-    $scope.dbName = 'kingold';
-    $scope.dbUsername = 'zj_admin';
-    $scope.dbPassword = '123456';
+    $scope.dbName = 'test';
+    $scope.dbUsername = 'root';
+    $scope.dbPassword = 'Urwork_123!';
     $scope.maxRows = 100;
 
     $scope.tables = [];

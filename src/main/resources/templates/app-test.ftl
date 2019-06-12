@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import com.rent.doc.Swagger2MarkupConverter;
+import com.domes.generatortools.doc.Swagger2MarkupConverter;
 
 import java.io.BufferedWriter;
 import java.nio.file.Files;

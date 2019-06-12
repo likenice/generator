@@ -3,9 +3,9 @@ package ${packageName};
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.rent.dto.ParamDTO;
-import com.rent.validation.InsertGroup;
-import com.rent.validation.UpdateGroup;
+import com.domes.generatortools.dto.ParamDTO;
+import com.domes.generatortools.validation.InsertGroup;
+import com.domes.generatortools.validation.UpdateGroup;
 
 <#list imports as import>
 import ${import.name};

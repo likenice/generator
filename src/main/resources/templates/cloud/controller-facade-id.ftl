@@ -2,9 +2,9 @@ package ${packageName};
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import com.rent.model.ResponseResult;
-import com.rent.exception.BusinessException;
-import com.rent.vo.ListResultVO;
+import com.domes.generatortools.model.ResponseResult;
+import com.domes.generatortools.exception.BusinessException
+import com.domes.generatortools.vo.ListResultVO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
 <#list imports as import>

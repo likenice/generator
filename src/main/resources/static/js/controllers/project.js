@@ -5,7 +5,7 @@ angular.module('app').controller('ProjectController', ['$scope', '$http', '$stat
     console.log('ProjectController 1.0.2');
 
     // 基本信息
-    $scope.groupId = 'com.rent';
+    $scope.groupId = 'com.domes';
     $scope.artifactId = 'service-demo';
     $scope.port = '9090';
     $scope.version = '1.0.0';
@@ -27,11 +27,11 @@ angular.module('app').controller('ProjectController', ['$scope', '$http', '$stat
 
     // 数据库连接
     $scope.dbType = 'MySQL';
-    $scope.dbIP = '127.0.0.1';
+    $scope.dbIP = '192.168.2.171';
     $scope.dbPort = '3306';
     $scope.dbName = 'test';
     $scope.dbUsername = 'root';
-    $scope.dbPassword = 'root';
+    $scope.dbPassword = 'Urwork_123!';
 
     // 数据库表
     $scope.tables = [];
@@ -46,12 +46,12 @@ angular.module('app').controller('ProjectController', ['$scope', '$http', '$stat
     $scope.javaDir = 'src/main/java';
     $scope.resourcesDir = 'src/main/resources';
     $scope.testDir = 'src/test/java';
-    $scope.basePackage = 'com.rent.service.user';
+    $scope.basePackage = 'com.domes.service.user';
     $scope.configPackage = 'config';
-    $scope.controllerPackage = 'web';
+    $scope.controllerPackage = 'controller';
     $scope.servicePackage = 'service';
     $scope.daoPackage = 'dao';
-    $scope.entityPackage = 'model';
+    $scope.entityPackage = 'entity';
     $scope.dtoPackage = 'dto';
     $scope.voPackage = 'vo';
 

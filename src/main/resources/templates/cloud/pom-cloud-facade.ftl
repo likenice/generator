@@ -17,7 +17,7 @@
 
         <!-- common-web -->
         <dependency>
-            <groupId>com.rent</groupId>
+            <groupId>com.domes</groupId>
             <artifactId>common-web</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

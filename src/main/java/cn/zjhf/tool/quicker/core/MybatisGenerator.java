@@ -38,10 +38,10 @@ public class MybatisGenerator implements Generator {
     /**
      * 通用Mapper基类
      */
-    private final static String MAPPER_INTERFACE_UUID = "com.rent.dao.CrudMapper," +
-            "com.rent.dao.InsertUuidListMapper";
+    private final static String MAPPER_INTERFACE_UUID = "com.domes.dao.CrudMapper," +
+            "com.domes.dao.InsertUuidListMapper";
 
-    private final static String MAPPER_INTERFACE_ID = "com.rent.dao.CrudMapper,";
+    private final static String MAPPER_INTERFACE_ID = "com.domes.dao.CrudMapper,";
 
     @Autowired
     private MybatisShellCallback shellCallback;
