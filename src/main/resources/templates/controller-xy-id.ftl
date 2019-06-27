@@ -72,6 +72,9 @@ public class ${className} {
     @ApiOperation(value = "查询${classRemark}接口", response = ${voClassName}.class, notes = "list")
     public LeaseResult<Page<${voClassName}>> pagelist(@ApiParam @Validated ${pageQueryDtoClassName} queryParam) throws BusinessException {
 
+        if(queryParam == null){
+            queryParam = new ${queryDtoClassName}();
+        }
         String jsonString = JSON.toJSONString(queryParam);
         ${queryDtoClassName} ${queryDtoObjectName} = JSON.parseObject(jsonString, ${queryDtoClassName}.class);
         int pageSize = queryParam.getPageSize();
